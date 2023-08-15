@@ -13,6 +13,29 @@ import 'swiper/css/pagination';
 import React, { useRef, useState } from 'react';
 
 export default function Banners() {
+  const banners = [
+    {
+    img: img,
+    alt: "imgmock1",
+    key: (Math.random()*5),
+  },
+  {
+    img: img,
+    alt: "imgmock2",
+    key: (Math.random()*5),
+  },
+  {
+    img: img,
+    alt: "imgmock3",
+    key: (Math.random()*5),
+  },
+  {
+    img: img,
+    alt: "imgmock4",
+    key: (Math.random()*5),
+  },
+]
+
   return (
     <div>
       {/* Swiper configs */}
@@ -27,21 +50,13 @@ export default function Banners() {
           disableOnInteraction: false,
         }}
         >
-        
-        <SwiperSlide>
-          <Image src={img} alt='imagem' />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src={img} alt='imagem'/>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src={img} alt='imagem'/>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src={img} alt='imagem'/>
-        </SwiperSlide>
-        
-        
+        {
+          banners.map((item, index) => (
+            <SwiperSlide key={index}>
+              <Image src={item.img} alt={item.alt}/>
+            </SwiperSlide>
+          ))
+        }
       </Swiper>
     </div>
   )

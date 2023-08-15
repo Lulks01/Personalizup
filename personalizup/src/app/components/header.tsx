@@ -1,4 +1,3 @@
-'use client'
 import { CartIcon, MenuIcon, PersonalizupLogo, SearchIcon } from "../../../public/Icons";
 
 import './header.css'

@@ -1,0 +1,88 @@
+:root {
+  --colorgray: #222221;
+  --colorblue: #017EFF;
+  --colorred: #C20E1A;
+}
+
+@font-face {
+  font-family: "PoppinsExtraBold";
+  src: url('../../../public/fonts/Poppins-ExtraBold.ttf');
+}
+
+
+.ProductsSwiper{
+  height: 300px;
+}
+
+#product{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  object-fit: contain;
+  height: 290px;
+  width: 180px;
+}
+
+#value{
+  color: var(--colorblue);
+  font-weight: bold;
+}
+
+#productphoto{
+  object-fit: cover;
+  border-radius: 10px;
+  width: 180px;
+  height: 180px;
+}
+
+#title{
+  text-align: center;
+  font-family: "PoppinsExtraBold", sans-serif;
+  font-size: 1.3rem;
+  color: var(--colorgray);
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+#producttitle{
+  font-size: 1rem;
+}
+
+#productprice{
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.button1{
+  border: none;
+  background: #017EFF;
+  color: white;
+  width: 90%;
+  border-radius: 4px;
+  box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.178);
+  cursor: pointer;
+  height: 50px;
+}
+
+.button1:hover{
+  background: white;
+  color: #017EFF;
+}
+
+.button2{
+  font-size: 0.7rem;
+  border: solid 1px #017EFF;
+  background: white;
+  color: #017EFF;
+  margin-top: 4px;
+  width: 90%;
+  border-radius: 4px;
+  box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.178);
+  cursor: pointer;
+  height: 20px;
+}
+
+.button2:hover{
+  background: #017EFF;
+  color: white;
+}

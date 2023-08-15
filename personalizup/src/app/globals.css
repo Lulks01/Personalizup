@@ -7,6 +7,11 @@
   src: url('../../public/fonts/Poppins-Bold.ttf');
 }
 
+@font-face {
+  font-family: "PoppinsExtraBold";
+  src: url('../../public/fonts/Poppins-ExtraBold.ttf');
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -14,17 +19,8 @@
 }
 
 .content{
-  background: rgb(255,255,255);
-  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(197,228,255,1) 100%);
   height: 400vw;
   padding-top: 80px;
   text-align: center;
   color: black;
-}
-
-.content h1 {
-  text-align: center;
-  font-family: "Poppins";
-  font-size: 2rem;
-  font-weight: bold;
 }
