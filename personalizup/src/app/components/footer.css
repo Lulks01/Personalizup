@@ -1,0 +1,85 @@
+:root {
+  --colorgray: #222221;
+  --colorblue: #017EFF;
+  --colorred: #C20E1A;
+}
+.footer{
+  background-color: var(--colorblue);
+  box-shadow: inset 0px 5px 5px rgba(0, 0, 0, 0.13);
+  color: white;
+}
+
+.footer h1{
+  font-size: 0.75rem;
+}
+
+.footer p{
+  font-size: 0.5rem;
+}
+
+.footerinfos, .infocontent{
+  font-size: 0.8rem;
+  text-align: left;
+  list-style: none;
+}
+
+
+.footerinfos .infobx .infocontent {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  color: #222221;
+  box-shadow: inset 0px 5px 5px rgba(0, 0, 0, 0.13);
+  overflow-y: hidden;
+  -webkit-filter: blur(2px);
+  font-size: 0.7rem;
+  text-align: justify;
+  transition: 0.5s cubic-bezier(.43,0,.16,1.01);
+}
+
+#open {
+  height: 150px;
+  padding: 10px 30px 10px 20px;
+  text-align: justify;
+  font-size: 0.7rem;
+  -webkit-filter: none;
+  background-color: white;
+  transition: 0.5s cubic-bezier(.43,0,.16,1.01);
+}
+
+
+.infobx{
+  position: relative;
+  cursor: pointer;
+}
+.arrowopen{
+  position: absolute;
+  right: 30px;
+  transition: 0.5s cubic-bezier(.43,0,.16,1.01);
+}
+
+.arrowclosed{
+  position: absolute;
+  right: 30px;
+  transform: rotate(-90deg);
+  transition: 0.5s cubic-bezier(.43,0,.16,1.01);
+}
+
+.footerinfos li{
+  box-shadow: inset 0px 5px 5px rgba(0, 0, 0, 0.13);
+  padding: 10px 0px 10px 20px;
+  border-top: 1px inset #222221;
+}
+
+.footerinfos li:last-child {
+  border-bottom: 1px inset #000000fb;
+}
+
+#personalizupinfos{
+  font-size: 0.6rem;
+  padding: 20px;
+}
+
+.atendimentobx{
+  display: flex;
+}

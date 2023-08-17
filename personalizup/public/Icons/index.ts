@@ -5,3 +5,4 @@ export {default as PersonalizupLogo} from './Personalizuplogo.svg';
 export {default as SecurityIcon} from './SecurityIcon.svg';
 export {default as EconomicIcon} from './EconomicIcon.svg';
 export {default as EditIcon} from './EditIcon.svg';
+export {default as Arrow} from './Arrow.svg';
