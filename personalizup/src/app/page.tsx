@@ -9,9 +9,9 @@ export default function Home() {
     <div>
       <Header/>
       <div className="content">
-        {/* <Banners/>
+        <Banners/>
         <AboveBanners/>
-        <Products/> */}
+        <Products/>
         <Footer/>
       </div>
     </div>

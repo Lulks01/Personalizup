@@ -6,3 +6,6 @@ export {default as SecurityIcon} from './SecurityIcon.svg';
 export {default as EconomicIcon} from './EconomicIcon.svg';
 export {default as EditIcon} from './EditIcon.svg';
 export {default as Arrow} from './Arrow.svg';
+export {default as WhatsappIcon} from './WhatsappIcon.svg';
+export {default as FacebookIcon} from './FacebookIcon.svg';
+export {default as InstagramIcon} from './InstagramIcon.svg';

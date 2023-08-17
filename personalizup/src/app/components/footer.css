@@ -7,6 +7,7 @@
   background-color: var(--colorblue);
   box-shadow: inset 0px 5px 5px rgba(0, 0, 0, 0.13);
   color: white;
+  padding: 20px 0px 0px 0px;
 }
 
 .footer h1{
@@ -23,6 +24,42 @@
   list-style: none;
 }
 
+::placeholder{
+  color: #222221;
+  padding: 10px;
+  font-size: 0.7rem;
+}
+
+input[type=text]{
+  border-radius: 10px;
+  border: none;
+  height: 35px;
+  margin: 10px;
+  width: 60%;
+}
+.newsletterbx{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+button[type=submit]{
+  position: absolute;
+  right: 20%;
+  border-radius: 25px;
+  cursor: pointer;
+  padding: 10px 20px 10px 30px;
+  border: none;
+  margin: 0;
+  background: none;
+}
+
+.submiticon{
+  font-size: 0.7rem;
+  transform: rotate(-90deg);
+  color: #017EFF;
+}
 
 .footerinfos .infobx .infocontent {
   position: relative;
@@ -41,7 +78,7 @@
   height: 150px;
   padding: 10px 30px 10px 20px;
   text-align: justify;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   -webkit-filter: none;
   background-color: white;
   transition: 0.5s cubic-bezier(.43,0,.16,1.01);
@@ -83,3 +120,45 @@
 .atendimentobx{
   display: flex;
 }
+
+.Icon{
+  font-size: 3rem;
+}
+
+.whatsappbx{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin-left: -5px;
+  border-radius: 10px;
+  font-size: 1rem;
+  width: 100%;
+  background-color: #017EFF;
+  z-index: 999;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  transition: 0.5s ease-in-out;
+}
+
+.whatsappbx:hover{
+  box-shadow: inset 0px 0px 15px rgb(255, 255, 255);
+}
+
+.socialicon{
+  font-size: 3rem;
+  padding: 15px;
+  border-radius: 50%;
+  background-color: #f3f3f3;
+  border: 1px solid #979797;
+  box-shadow: 0px 0px 10px #e3e3e3;
+  margin-right: 30px;
+  transition: 0.2s ease-in-out;
+}
+
+.socialicon:hover{
+  background-color: #ffffff;  
+}
+
