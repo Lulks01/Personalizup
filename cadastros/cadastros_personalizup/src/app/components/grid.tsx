@@ -1,32 +1,28 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/ReactToastify.css';
 import axios from 'axios';
 import './grid.css'
-export default function Grid() {
+import { DeleteIcon, EditIcon } from '../../../public';
 
-  const [clients, setClients] = useState([]);
-  const [onEdit, setOnEdit] = useState(null);
-  
+import { useEffect } from 'react';
 
-  const getClients = async () => {
-    try{
-      const res = await axios.get("http://localhost:3030/");
-      setClients(res.data);
-    } catch (err) {
-      console.log('Essa porra é um erro =>', err);
-    }
+export default function Grid(props) {
+  //PUXAR DADOS DO DB
+  const clients = props.clients
+
+  const handleEdit = (item) =>{
+    props.setOnEdit(item)
   }
-  useEffect(() => {
-    getClients();
 
-  }, [setClients])
+  const handleDelete = async (id) => {
+    await axios
+    .delete("http://localhost:3030/" + id)
 
-  
-  console.log(clients);
+    const newArray =  clients.filter((client) => client.id !== id);
+    props.setClients(newArray);
+
+    props.setOnEdit(null)
+  };
 
   return( 
     <div className="grid">
@@ -38,17 +34,29 @@ export default function Grid() {
             <th>Telefone</th>
             <th id="onlyweb">Email</th>
             <th>Valor Gasto</th>
+            <th></th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
             { 
             clients.map((item, i) => (
               <tr key={i}>
-                <td>{item.idclientes}</td>
+                <td>{item.id}</td>
                 <td>{item.nome}</td>
                 <td>{item.telefone}</td>
                 <td id='onlyweb'>{item.email}</td>
                 <td >{item.gastos}</td>
+                <td>
+                  <span onClick={() => handleEdit(item)}>
+                    <EditIcon className='icon'/>
+                  </span>
+                </td>
+                <td>
+                  <span onClick={() => handleDelete(item.id)}>
+                    <DeleteIcon className='icon'/>
+                  </span>
+                </td>
               </tr>
             ))
             }

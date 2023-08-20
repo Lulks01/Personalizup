@@ -1,20 +1,17 @@
+
 import './globals.css';
 
 import Grid from './components/grid';
+import Form from './components/form';
+import Dashboard from './components/Dashboard';
+
 
 export default function Page() {
 
-  return (
 
+  return (
     <main className='main'>
-      <div className='pagebtn'>
-        <a href="/cadastro">
-          <div className='btn'>
-          Cadastro <span className='seta'>{'>'}</span>
-          </div>
-        </a>
-      </div>
-      <Grid/>
+      <Dashboard/>
     </main>
   )
 }
