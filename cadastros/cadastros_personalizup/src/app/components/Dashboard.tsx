@@ -6,6 +6,7 @@ import Grid from './grid';
 import Form from './form';
 import { getClientBuildManifest } from 'next/dist/client/route-loader';
 
+import './dashboard.css'
 
 export default function Dashboard() {
 
@@ -14,7 +15,7 @@ export default function Dashboard() {
   
   const getClients = async () => {
     try{
-      const res = await axios.get("http://localhost:3030/");
+      const res = await axios.get("http://191.217.195.236:3030/");
       setClients(res.data);
     } catch (err) {
       console.log('Essa porra é um erro =>', err);
@@ -29,20 +30,24 @@ export default function Dashboard() {
   
 
   return(
-    <>
-      <Form
-      onEdit={onEdit}
-      setClients={setClients}
-      getClients={getClients}
-      setOnEdit={setOnEdit}
-      />
-
-      <Grid
-      clients={clients}
-      getClients={getClients}
-      setClients={setClients}
-      setOnEdit={setOnEdit}
-      />
-    </>
+    <div className='dashboard'>
+      <div className='topside'>
+        Clientes
+      </div>
+      <div className='clients'>
+        <Form
+        onEdit={onEdit}
+        setClients={setClients}
+        getClients={getClients}
+        setOnEdit={setOnEdit}
+        />
+        <Grid
+        clients={clients}
+        getClients={getClients}
+        setClients={setClients}
+        setOnEdit={setOnEdit}
+        />
+      </div>
+    </div>
   )
 }

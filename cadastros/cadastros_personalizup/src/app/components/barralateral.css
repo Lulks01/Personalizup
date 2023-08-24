@@ -1,0 +1,62 @@
+:root{
+  --blue: rgb(0, 136, 255);
+}
+
+.BarraLateral{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: content-box;
+  width: 100px;
+  height: 100vh;
+  background-color: var(--blue);
+  box-shadow: 5px 0px 6px rgba(0, 0, 0, 0.19);
+  z-index: 1;
+  
+}
+
+.menuIcon{
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.BarraLateral > .botões > .button{
+  transition: 0.2s ease-in-out;
+  text-align: center;
+  width: 100%;
+}
+
+.button:hover, .personalizupLogo:hover{
+  filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.42));
+  transform: scale(110%);
+}
+
+.personalizupLogo{
+  font-size: 4rem;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.botões{
+  width: 100%;
+  margin-top: 30px;
+  display: inherit;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.button > p{
+  text-align: center;
+  font-size: 0.7rem;
+  text-indent: -5px;
+  line-height: 0px;
+  color: white;
+  user-select: none;
+}
+
+#listanumerada{
+  transform: translateX(-3px);
+}

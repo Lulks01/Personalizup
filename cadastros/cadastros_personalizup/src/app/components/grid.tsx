@@ -16,7 +16,7 @@ export default function Grid(props) {
 
   const handleDelete = async (id) => {
     await axios
-    .delete("http://localhost:3030/" + id)
+    .delete("http://191.217.195.236:3030/" + id)
 
     const newArray =  clients.filter((client) => client.id !== id);
     props.setClients(newArray);
@@ -25,7 +25,6 @@ export default function Grid(props) {
   };
 
   return( 
-    <div className="grid">
       <table className="table">
         <thead>
           <tr>
@@ -63,7 +62,5 @@ export default function Grid(props) {
         </tbody>
 
       </table>
-
-    </div>
   )
 }

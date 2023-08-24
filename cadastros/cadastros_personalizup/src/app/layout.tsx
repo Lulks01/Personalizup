@@ -1,3 +1,4 @@
+import BarraLateral from './components/barralateral'
 import './globals.css'
 import type { Metadata } from 'next'
 

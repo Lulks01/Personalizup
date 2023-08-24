@@ -1,3 +1,4 @@
+
 import './form.css';
 import '../globals.css';
 
@@ -34,7 +35,7 @@ export default function Form(props) {
 
     if (props.onEdit) {
        await axios
-       .put("http://localhost:3030/" + props.onEdit.id,{
+       .put("http://191.217.195.236:3030/" + props.onEdit.id,{
           nome: user.nome.value,
           telefone: user.telefone.value,
           email: user.email.value,
@@ -46,12 +47,12 @@ export default function Form(props) {
 
     } else{
         await axios
-        .post("http://localhost:3030", {
+        .post("http://191.217.195.236:3030", {
           nome: user.nome.value,
           telefone: user.telefone.value,
           email: user.email.value,
           gastos: user.gastos.value,
-    })
+    }) 
   }
   props.setOnEdit(null)
   props.getClients()
