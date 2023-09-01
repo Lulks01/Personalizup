@@ -10,7 +10,10 @@
   border-radius: 7px;
   overflow: hidden;
   width: 90%;
+  font-size: 1rem;
 }
+
+
 
 .table tbody tr{
   border-bottom: 1px solid rgb(208, 208, 208);
@@ -51,7 +54,7 @@
 .table th,
 .table td{
   text-align: left;
-  padding: 12px 15px;
+  padding: 12px 13px;
 }
 
 h1{

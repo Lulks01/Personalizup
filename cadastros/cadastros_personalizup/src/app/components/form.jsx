@@ -14,7 +14,6 @@ export default function Form(props) {
 
       user.nome.value = props.onEdit.nome;
       user.telefone.value = props.onEdit.telefone;
-      user.email.value = props.onEdit.email;
       user.gastos.value = props.onEdit.gastos
     }
   }, [props.onEdit])
@@ -38,7 +37,6 @@ export default function Form(props) {
        .put("http://191.217.195.236:3030/" + props.onEdit.id,{
           nome: user.nome.value,
           telefone: user.telefone.value,
-          email: user.email.value,
           gastos: user.gastos.value,
         })
         .then(() => console.log('Usuario editado com sucesso!'), props.getClients())
@@ -50,9 +48,8 @@ export default function Form(props) {
         .post("http://191.217.195.236:3030", {
           nome: user.nome.value,
           telefone: user.telefone.value,
-          email: user.email.value,
           gastos: user.gastos.value,
-    }) 
+    })
   }
   props.setOnEdit(null)
   props.getClients()
@@ -69,7 +66,6 @@ export default function Form(props) {
       <form className="form" ref={ref} onSubmit={handleSubmit}>
           <input type="text" name="nome" id="nome" placeholder='Nome' />
           <input type="tel" name="telefone" id="telefone" placeholder='Telefone' />
-          <input type="email" name="email" id="email" placeholder='E-mail' />
           <input type="number" name="gastos" id="gastos" placeholder='Valor gasto' />
           <button type="submit" className='botaoenviar'>Salvar</button>
       </form>

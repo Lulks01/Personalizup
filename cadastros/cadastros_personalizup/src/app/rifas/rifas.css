@@ -1,4 +1,27 @@
-.rifas {
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+}
+
+.main{
+  display: flex;
+  flex-direction: row;
+}
+
+.topside{
+  display: flex;
+  background-color: var(--blue);
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  padding: 10px;
+}
+
+.rifas{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6,5 +29,4 @@
   overflow-x: hidden;
   width: 100%;
   margin-left: 100px;
-  font-size: 5rem;
 }

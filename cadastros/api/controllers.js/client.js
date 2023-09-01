@@ -1,7 +1,7 @@
 import { db } from '../database.js'
 
 export const getClients = (req, res) => {
-  const searchQuery = 'SELECT * FROM clientes'
+  const searchQuery = `SELECT * FROM clientes`
 
   db.query(searchQuery, (err, data) => {
     if (err) return res.json(err);
@@ -12,12 +12,11 @@ export const getClients = (req, res) => {
 
 
 export const addClient = (req, res) => {
-  const searchQuery = "INSERT INTO clientes(`nome`, `telefone`,`email`, `gastos`) VALUES(?)";
-
+  const searchQuery = "INSERT INTO clientes(`nome`, `telefone`, `gastos`) VALUES(?)";
+  
   const values = [
     req.body.nome,
     req.body.telefone,
-    req.body.email,
     req.body.gastos,
   ];
 
@@ -29,12 +28,11 @@ export const addClient = (req, res) => {
 };
 
 export const updateCLient = (req, res) => {
-  const searchQuery = "UPDATE clientes SET `nome` = ?, `telefone` = ?, `email` = ?, `gastos` = ? WHERE `id` = ?";
+  const searchQuery = "UPDATE clientes SET `nome` = ?, `telefone` = ?, `gastos` = ? WHERE `id` = ?";
 
   const values = [
     req.body.nome,
     req.body.telefone,
-    req.body.email,
     req.body.gastos,
   ];
 
@@ -55,3 +53,4 @@ export const deleteClient = (req, res) => {
     return res.status(200).json("Cliente deletado com sucesso!");
   });
 }
+

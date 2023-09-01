@@ -1,12 +1,12 @@
 'use client';
 
 import axios from 'axios';
-import './grid.css'
+import './table.css'
 import { DeleteIcon, EditIcon } from '../../../public';
 
 import { useEffect } from 'react';
 
-export default function Grid(props) {
+export default function Table(props) {
   //PUXAR DADOS DO DB
   const clients = props.clients
 
@@ -31,7 +31,6 @@ export default function Grid(props) {
             <th>ID</th>
             <th>Nome</th>
             <th>Telefone</th>
-            <th id="onlyweb">Email</th>
             <th>Valor Gasto</th>
             <th></th>
             <th></th>
@@ -44,7 +43,6 @@ export default function Grid(props) {
                 <td>{item.id}</td>
                 <td>{item.nome}</td>
                 <td>{item.telefone}</td>
-                <td id='onlyweb'>{item.email}</td>
                 <td >{item.gastos}</td>
                 <td>
                   <span onClick={() => handleEdit(item)}>

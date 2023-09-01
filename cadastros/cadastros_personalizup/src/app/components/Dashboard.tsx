@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import Grid from './grid';
+import Table from './table';
 import Form from './form';
 import { getClientBuildManifest } from 'next/dist/client/route-loader';
 
@@ -41,7 +41,7 @@ export default function Dashboard() {
         getClients={getClients}
         setOnEdit={setOnEdit}
         />
-        <Grid
+        <Table
         clients={clients}
         getClients={getClients}
         setClients={setClients}

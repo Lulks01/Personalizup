@@ -1,4 +1,4 @@
-import express from "express";;
+import express from "express";
 
 import { getClients, addClient, deleteClient, updateCLient } from '../controllers.js/client.js';
 

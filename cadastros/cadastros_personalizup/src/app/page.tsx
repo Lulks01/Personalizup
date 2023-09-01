@@ -1,8 +1,5 @@
 
 import './globals.css';
-
-import Grid from './components/grid';
-import Form from './components/form';
 import Dashboard from './components/Dashboard';
 import BarraLateral from './components/barralateral';
 
